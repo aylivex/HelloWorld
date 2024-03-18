@@ -1,0 +1,85 @@
+{
+    "version": 2,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 16,
+        "patch": 0
+    },
+    "configurePresets": [
+        {
+            "name": "windows_debug_32",
+            "displayName": "Windows Debug 32 bit",
+            "description": "Windows Debug projects using Visual Studio compiler",
+            "generator": "Visual Studio 17 2022",
+            "architecture": "win32",
+            "binaryDir": "${sourceDir}/build32",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": {
+                    "type": "STRING",
+                    "value": "Debug"
+                }
+            }
+        },
+        {
+            "name": "windows_release_32",
+            "displayName": "Windows Release 32 bit",
+            "description": "Windows Debug projects using Visual Studio compiler",
+            "generator": "Visual Studio 17 2022",
+            "architecture": "win32",
+            "binaryDir": "${sourceDir}/build32",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": {
+                    "type": "STRING",
+                    "value": "Release"
+                }
+            }
+        },
+
+        {
+            "name": "windows_debug_64",
+            "displayName": "Windows Debug 64 bit",
+            "description": "Windows Debug projects using Visual Studio compiler",
+            "generator": "Visual Studio 17 2022",
+            "architecture": "x64",
+            "binaryDir": "${sourceDir}/build64",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": {
+                    "type": "STRING",
+                    "value": "Debug"
+                }
+            }
+        },
+        {
+            "name": "windows_release_64",
+            "displayName": "Windows Release 64 bit",
+            "description": "Windows Debug projects using Visual Studio compiler",
+            "generator": "Visual Studio 17 2022",
+            "architecture": "x64",
+            "binaryDir": "${sourceDir}/build64",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": {
+                    "type": "STRING",
+                    "value": "Release"
+                }
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "debug32",
+            "configurePreset": "windows_debug_32"
+        },
+        {
+            "name": "release32",
+            "configurePreset": "windows_release_32"
+        },
+        {
+            "name": "debug64",
+            "configurePreset": "windows_debug_64"
+        },
+        {
+            "name": "release64",
+            "configurePreset": "windows_release_64"
+        }
+    ]
+}

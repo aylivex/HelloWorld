@@ -1,0 +1,9 @@
+**.obj
+**.exe
+**.exe.txt
+**.com
+**.map
+**.ilk
+**.pdb
+build32/
+build64/

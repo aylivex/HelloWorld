@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly manifestVersion="1.0"
+          xmlns="urn:schemas-microsoft-com:asm.v1"
+          xmlns:asmv3="urn:schemas-microsoft-com:asm.v3">
+    <assemblyIdentity
+        type="win32"
+        name="alexey-ivanov.asm.HelloWorld"
+        version="1.0.0.0"
+        processorArchitecture="x86"
+    />
+    <description>Displays Hello World</description>
+    <application xmlns="urn:schemas-microsoft-com:asm.v3">
+        <windowsSettings
+                xmlns:cp="http://schemas.microsoft.com/SMI/2019/WindowsSettings"
+                xmlns:v1="http://schemas.microsoft.com/SMI/2005/WindowsSettings"
+                xmlns:v2="http://schemas.microsoft.com/SMI/2016/WindowsSettings">
+            <cp:activeCodePage>UTF-8</cp:activeCodePage>
+            <v1:dpiAware>true/pm</v1:dpiAware>
+            <v2:dpiAwareness>PerMonitorV2, PerMonitor, system, unaware</v2:dpiAwareness>
+        </windowsSettings>
+    </application>
+    <trustInfo xmlns="urn:schemas-microsoft-com:asm.v3">
+        <security>
+            <requestedPrivileges>
+                <requestedExecutionLevel
+                    level="asInvoker"
+                    uiAccess="false"
+                />
+            </requestedPrivileges>
+        </security>
+    </trustInfo>
+</assembly>

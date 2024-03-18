@@ -1,0 +1,36 @@
+﻿LANGUAGE 0x09, 0x00 ; LANG_ENGLISH, SUBLANG_NEUTRAL
+
+#pragma code_page(65001) // UTF-8
+
+STRINGTABLE
+{
+   1       "Hello Assembly"
+}
+
+
+1 VERSIONINFO
+FILEVERSION 1, 0, 0, 0
+PRODUCTVERSION 1, 0, 0, 0
+FILEOS 0x00040004   // VOS_NT_WINDOWS32
+FILETYPE 0x00000001 // VFT_APP
+{
+    BLOCK "StringFileInfo"
+    {
+        BLOCK "000904E4"
+        {
+            VALUE "CompanyName", "Alexey Ivanov\000"
+            VALUE "FileDescription", "Hello World\000"
+            VALUE "FileVersion", "1.0\000"
+            VALUE "InternalName", "HelloWorld\000"
+            VALUE "LegalCopyright", "© 2024 Alexey Ivanov\000"
+            VALUE "OriginalFilename", "Hello.exe\000"
+            VALUE "ProductName", "Hello World\000"
+            VALUE "ProductVersion", "1.0\000"
+        }
+    }
+
+    BLOCK "VarFileInfo"
+    {
+        VALUE "Translation", 0x0009, 0x04E4
+    }
+}
