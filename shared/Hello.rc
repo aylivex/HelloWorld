@@ -23,7 +23,13 @@ FILETYPE 0x00000001 // VFT_APP
             VALUE "FileVersion", "1.0\000"
             VALUE "InternalName", "HelloWorld\000"
             VALUE "LegalCopyright", "© 2024 Alexey Ivanov\000"
-            VALUE "OriginalFilename", "Hello.exe\000"
+            #if defined(BITS_32)
+                VALUE "OriginalFilename", "HelloWorld.exe\000"
+            #elif defined(BITS_64)
+                VALUE "OriginalFilename", "HelloWorld64.exe\000"
+            #else
+                VALUE "OriginalFilename", "Hello.exe\000"
+            #endif
             VALUE "ProductName", "Hello World\000"
             VALUE "ProductVersion", "1.0\000"
         }

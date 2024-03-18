@@ -5,5 +5,6 @@
 **.map
 **.ilk
 **.pdb
+**.res
 build32/
 build64/
