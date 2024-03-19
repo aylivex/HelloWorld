@@ -32,12 +32,13 @@ include win64.inc
 hInst           dq              ?           ; hInstance
 hWnd            dq              ?           ; hWnd
 
-wndClass        WNDCLASS        <?>         ; Class of the window
-
 paintStruct     PAINTSTRUCT     <?>         ; Painting structure
 
 msg             MSGSTRUCT       <?>         ; Message structure
 
+.data
+
+wndClass    WNDCLASS    < CS_HREDRAW OR CS_VREDRAW, 0, offset WndProc, 0, 0, 0, 0, 0, COLOR_WINDOW + 1, 0, offset szWindowClass >
 
 .const
 
@@ -79,12 +80,6 @@ main proc
 
     mov     [hInst], rax        ; Save hInstance
 
-    mov     [wndClass.style], CS_HREDRAW OR CS_VREDRAW
-    lea     rcx, WndProc
-    mov     [wndClass.lpfnWndProc], rcx
-    mov     [wndClass.cbClsExtra], 0
-    mov     [wndClass.cbWndExtra], 0
-
     mov     [wndClass.hInstance], rax
 
     ; Load standard app icon as the window icon
@@ -98,11 +93,6 @@ main proc
     mov     rdx, IDC_ARROW
     call    LoadCursorW
     mov     [wndClass.hCursor], rax
-
-    mov     [wndClass.hbrBackground], COLOR_WINDOW + 1
-    mov     [wndClass.lpszMenuName], 0
-    lea     rax, offset szWindowClass
-    mov     [wndClass.lpszClassName], rax
 
     lea     rcx, offset wndClass
     call    RegisterClassW          ; Register window class
