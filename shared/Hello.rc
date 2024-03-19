@@ -4,7 +4,24 @@
 
 STRINGTABLE
 {
-   1       "Hello Assembly"
+    // Font for window text
+    100     "Times New Roman"
+#if defined(BITS_32)
+    // Window caption
+    110     "Hello Assembly 32"
+    // Text in the window
+    111     "Hello 32 bit Assembly!"
+#elif defined(BITS_64)
+    // Window caption
+    110     "Hello Assembly 64"
+    // Text in the window
+    111     "Hello 64 bit Assembly!"
+#else
+    // Window caption
+    110     "Hello Assembly 16"
+    // Text in the window
+    111     "Hello 16 bit Assembly!"
+#endif
 }
 
 
