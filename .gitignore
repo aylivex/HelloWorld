@@ -6,5 +6,8 @@
 **.ilk
 **.pdb
 **.res
+**.lst
+**.sln
+**.vs/
 build32/
 build64/
